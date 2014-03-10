@@ -32,7 +32,10 @@ For example:
 
 Valid JSON is readable as EllDN.
 
-The syntax is as follows:
+For the syntax, see the [Syntax Diagrams](http://boynton.github.io/elldn/elldn.xhtml), generated
+from [EBNF](https://github.com/boynton/elldn/blob/master/elldn.ebnf).
+
+The syntax is summarized as follows:
 
     object
         {}
