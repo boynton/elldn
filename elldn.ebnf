@@ -1,0 +1,25 @@
+
+Value    ::= Object | Array | List | String | Number | Boolean | Nil | Symbol
+
+Object   ::= '{' (Key ':'? Value  ( ','? Key ':'? Value)*) '}'
+Key      ::= String | Symbol
+
+Array    ::= '[' Value (','? Value)* ']'
+
+List     ::= '(' Value (','? Value)* ')'
+
+String    ::= '"' ('Printable UNICODE character except " or \\' | ('\\' ('"' | '\\' | '/' | 'b' | 'f' | 'n' | 'r' | 't' | ('u' Hex Hex Hex Hex))))* '"'
+Hex       ::= [0-9a-fA-F]
+
+Number    ::= '-'? ('0' | (NonZeroDigit Digit*) ( '.' Digit+)?) (('e' | 'E') ('+' | '-')? Digit+)?
+Digit     ::= [0-9]   
+NonZeroDigit   ::= [1-9]   
+
+Boolean   ::= 'true' | 'false'
+
+Nil      ::= 'nil' | 'null'
+
+Symbol    ::= [a-zA-Z_#]([a-zA-Z0-9_#!] | '-')*
+
+
+
