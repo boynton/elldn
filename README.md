@@ -28,8 +28,10 @@ For example:
     {"foo": 2, "bar": 3} - a regular JSON object
     {foo: 2, bar: 3} - an object using symbols as keys
     {foo: 2 bar: 3} - commas are optional
-    {list-items: (1 2 3) vector-items: [1 2 3]} - an object with list and vector values
- 
+    {list-items: (1 2 3) array-items: [1 2 3]} - an object with list and array values
+
+Valid JSON is readable as EllDN.
+
 The syntax is as follows:
 
     object
