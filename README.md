@@ -4,7 +4,8 @@
 
 ## Overview
 
-EllDN (ℒ Data Notation, pronounced "*ell* done") is ℒ's Data Notation. It is a superset of JSON, adding lists and symbols.amd relaxing the syntax somewhat.
+EllDN (ℒ Data Notation, pronounced "*ell* done") is ℒ's Data Notation. It is a superset of JSON, adding lists and symbols and
+relaxing the syntax somewhat.
 
 Commas are treated as whitespace, so the following two forms are equivalent:
 
