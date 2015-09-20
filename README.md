@@ -23,7 +23,7 @@ All other colons are treated as whitespace, like commas are. So the following ar
     [foo:: bar]
     [foo::::: bar]
 
-All of these represent an array with one keywords and one symbol as elements, all other colons are ignored. So for example
+All of these represent an vector with one keywords and one symbol as elements, all other colons are ignored. So for example
 the following are equivalent:
 
     {"x": 23, "y": 57}
@@ -51,9 +51,9 @@ Some more examples:
     {"foo": 2, "bar": 3} - a regular JSON object
     {foo: 2, bar: 3} - an object using keywords as keys
     {foo: 2 bar: 3} - commas are optional here, too
-    {list-items: (1 2 3) array-items: [1 2 3]} - an object with list and array values
+    {list-items: (1 2 3) vector-items: [1 2 3]} - an object with list and vector values
     (<string> <number>) - a list of types
-    #<point>{x: 23 y: 57} - ab object of type _<point>_, with a structued value.
+    #<point>{x: 23 y: 57} - an object _instance_ of type _<point>_, with a structured value.
 
 Valid JSON is readable as EllDN, although not all EllDN can be expressed as JSON.
 
@@ -80,7 +80,7 @@ The syntax is summarized as follows:
         symbol
         keyword
 
-    array
+    vector
         []
         [ elements ]
 
@@ -102,7 +102,7 @@ The syntax is summarized as follows:
         false
         null
         nil
-        object
-        array
+        instance
+        vector
         list
 
