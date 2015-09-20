@@ -26,12 +26,3 @@ Keyword   ::= Symbol ':'
 Type      ::= '<' Symbol '>'
 
 Instance   ::= '#' Type Value
-
-
-
-
-
-
-
-
-
