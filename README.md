@@ -4,10 +4,10 @@
 
 ## Overview
 
-EllDN (ℒ Data Notation, pronounced "*ell* done") is ℒ's Data Notation. It is a superset of JSON, adding lists, symbols,
-keywords, types, and generalized typed objects.
+EllDN is the ℒ Data Notation, pronounced /ˈɛldən/ ("EL-dən") is ℒ's Data Notation.
+It is a superset of JSON, adding lists, symbols, keywords, types, and generalized typed objects.
 
-Commas are consider whitespace in EllDN, so the following are equivalent:
+Commas are considered whitespace in EllDN, so the following are equivalent:
 
     [1, 2, 3]
     [1 2 3]
@@ -17,13 +17,7 @@ The JSON reserved values `null`, `true`, and `false` are symbols that are define
 EllDN also defines a _keyword_ to be a token ending with a colon (`:`). A _type_ is a symbol surrounded by
 angle brackets, i.e. `<string>`.
 
-All other colons are treated as whitespace, like commas are. So the following are valid and equivalent:
-
-    [foo: bar]
-    [foo:: bar]
-    [foo::::: bar]
-
-All of these represent an vector with one keywords and one symbol as elements, all other colons are ignored. So for example
+Inside a struct, a colon that is not part of a keyword is treated as whitespace. So for example
 the following are equivalent:
 
     {"x": 23, "y": 57}
@@ -42,10 +36,13 @@ Some more examples:
 
     () - an empty list
     true - the true value
-    foo?
-    foo - some other symbol
+    foo - some symbol
+    foo? - another symbol
+    foo! - also a valid symbol
     foo: - a keyword
     <foo> - a type
+    [1, 2, 3] - a vector (JSON array) of 3 values
+    [1 2 3] - an equivalent vector
     (1 2 3) - a list of 3 elements
     (1, 2, 3) - same thing (commas are optional)
     {"foo": 2, "bar": 3} - a regular JSON object
