@@ -4,8 +4,8 @@
 
 ## Overview
 
-EllDN is the ℒ Data Notation, pronounced /ˈɛldən/ ("EL-dən") is ℒ's Data Notation.
-It is a superset of JSON, adding lists, symbols, keywords, types, and generalized typed objects.
+EllDN is the ℒ Data Notation, pronounced /ˈɛldən/ ("EL-dən").
+It is a superset of JSON, adding _lists_, _symbols_, _keywords_, _types_, and generalized typed object _instances_.
 
 Commas are considered whitespace in EllDN, so the following are equivalent:
 
@@ -50,7 +50,7 @@ Some more examples:
     {foo: 2 bar: 3} - commas are optional here, too
     {list-items: (1 2 3) vector-items: [1 2 3]} - an object with list and vector values
     (<string> <number>) - a list of types
-    #<point>{x: 23 y: 57} - an object _instance_ of type _<point>_, with a structured value.
+    #<point>{x: 23 y: 57} - an object instance of type <point>, with a structured value.
 
 Valid JSON is readable as EllDN, although not all EllDN can be expressed as JSON.
 
